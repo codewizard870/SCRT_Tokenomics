@@ -9,30 +9,26 @@ import Footer from "./Pages/Footer";
 import { checkNetwork } from './Util';
 
 const Layout = () => {
-
   const { state, dispatch } = useStore();
 
   return (
-      <Flex
-        background={'black'}
-        justify={'center'}
-        w={'100%'}
+    <Flex
+      background={'linear-gradient(rgba(255,255,255,.95),rgba(250,250,250,.95))'}
+      justify={'center'}
+      w={'100%'}
+    >
+      <VStack
+        fontFamily={'SF-Pro-Text'}
+        fontStyle={'normal'}
+        spacing={'10px'}
+        color={'#413e66'}
+        w = {'100%'}
       >
-        <VStack
-          fontFamily={'SF-Pro-Text'}
-          fontStyle={'normal'}
-          letterSpacing={'-0.06em'}
-          spacing={'10px'}
-          color={'white'}
-          maxWidth={'1440px'}
-          w = {'100%'}
-        >
-          <Navbar />
-          <Outlet />
-          <Footer />
-
-        </VStack>
-      </Flex>
+        <Navbar />
+        <Outlet />
+        <Footer />
+      </VStack>
+    </Flex>
   )
 };
 export default Layout;

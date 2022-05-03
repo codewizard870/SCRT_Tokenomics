@@ -15,14 +15,14 @@ export interface AppContextInterface {
   loading: boolean,
   net: "mainnet" | "testnet",
   connected: Boolean,
-  tab: "dashboard" | "mypage" | "earn" | "utility",
+  tab: string,
 }
 
 const initialState: AppContextInterface = {
   loading: false,
   net: "testnet",
   connected: false,
-  tab: 'dashboard',
+  tab: 'home',
 }
 
 export enum ActionKind{
