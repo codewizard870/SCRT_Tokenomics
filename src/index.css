@@ -1,0 +1,54 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+@font-face {
+  font-family: 'SF-Pro';
+  src: local('SF-Pro'), url('./fonts/SF-Pro.ttf') format('truetype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                          'embedded-opentype', and 'svg' */
+}
+@font-face {
+  font-family: 'SF-Pro-Text';
+  src: url('./fonts/Pro-Fonts/SF-Pro-Display-Regular.otf') format('OpenType');
+  font-weight: 400;
+}
+/* @font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: 'italic';
+  src: url('./fonts/Pro-Fonts/SF-Pro-Text-RegularItalic.otf') format('OpenType');
+  font-weight: 400;
+} */
+@font-face {
+  font-family: 'SF-Pro-Text';
+  src: url('./fonts/Pro-Fonts/SF-Pro-Text-Bold.otf') format('OpenType');
+  font-weight: 700;
+}
+/* @font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: 'italic';
+  src: url('./fonts/Pro-Fonts/SF-Pro-Text-BoldItalic.otf') format('OpenType');
+  font-weight: 700;
+} */
+@font-face {
+  font-family: 'SF-Pro-Text';
+  src: url('./fonts/Pro-Fonts/SF-Pro-Text-Heavy.otf') format('OpenType');
+  font-weight: 900;
+}
+/* @font-face {
+  font-family: 'SF-Pro-Text';
+  font-style: 'italic';
+  src: url('./fonts/Pro-Fonts/SF-Pro-Text-HeavyItalic.otf') format('OpenType');
+  font-weight: 900;
+} */
