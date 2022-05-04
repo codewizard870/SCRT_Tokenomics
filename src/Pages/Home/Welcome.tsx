@@ -10,6 +10,7 @@ const Welcome: FunctionComponent = (props) => {
       direction={{ base: 'column', md: 'row', lg: 'row' }}
       w='100%'
       align={'center'}
+      px={{sm:'30px', md: '50px', lg:'80px'}}
     >
       <Flex
         direction={'column'}

@@ -1,48 +1,122 @@
 import React, { FunctionComponent, useEffect, useState } from 'react';
-import { HStack, Stack, VStack, Flex, Text, Image, Link, Center, Divider } from '@chakra-ui/react'
+import { HStack, Stack, VStack, Flex, Text, Image, Input, InputGroup, InputRightElement, Divider, Button} from '@chakra-ui/react'
 
-import GreenLamp from './../../assets/GreenLamp.svg'
-import Twitter from './../../assets/Twitter.svg'
-import Subtract from './../../assets/Subtract.svg'
-import Medium from './../../assets/Medium.svg'
+import {FaDiscord, FaTwitter, FaYoutube, FaFacebook, FaInstagram, FaReddit, FaTiktok} from 'react-icons/fa';
+
+import logo from '../../assets/logo.webp'
+
+const data = [
+  {title:'Branding', url:'branding'},
+  {title:'White paper', url:'branding'},
+  {title:'Our Team', url:'branding'},
+  {title:'Terms of Service', url:'branding'},
+  {title:'Privacy Policy', url:'branding'},
+  {title:'SafeMoon', url:'branding'},
+];
 
 const Footer: FunctionComponent = (props) => {
-  const [blockHeight, setBlockHeight] = useState(0); 
-  const [timer, setTimer] = useState(0);
-
   return (
     <Flex
-      direction={'row'}
-      px={{ sm: '10px', md:'20px', lg: '109px' }}
+      direction='column'
+      px={{ sm: '10px', md:'20px', lg: '50px' }}
       pt={'108px'}
-      pb={'104px'}
       w={'100%'}
-      justify={'space-between'}
-      align={'center'}
+      background='#e5e7e9'
+      pb='50px'
     >
-      <HStack spacing={'5px'}>
-        <Image src={GreenLamp} w={'10px'}/>
-        <Text
-          ml={'5px'}
-          fontSize={'9px'}
-          fontWeight={'860'}
-          lineHeight={'10px'}
+      <Stack
+        direction={{sm: 'column', md:'column', lg:'row'}}
+        align={'center'}
+        spacing={{sm:'10px', md:'10px', lg:'240px'}}
+      >
+        <Flex
+          direction='column'
+          align='baseline'
+          w='100%'
         >
-          LATEST BLOCK:&nbsp;&nbsp;&nbsp;{blockHeight}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TERMS
-        </Text>
-      </HStack>
-      <HStack spacing={'50px'}>
-        <Image src={Twitter} w={'15px'} />
-        <Image src={Subtract} w={'15px'} />
-        <Image src={Medium} w={'15px'} />
-        <Text
-          fontSize={'9px'}
-          fontWeight={'860'}
-          lineHeight={'10px'}
+          <Image src={logo} w='60px' />
+          <Text fontSize='32px'>
+            The light in the darkness of DeFi.
+          </Text>
+          <Text fontSize='16px' mt='24px'>
+            We are committed to excellence and full transparency in the way we run our business, forging a bright future for our company and investors.
+          </Text>
+        </Flex>
+        <Flex
+          direction='column'
+          align='end'
+          w='100%'
         >
-          DOCS
+          <Text fontSize='16px'>
+            Want all the latest news? Sign up for our email newsletter!
+          </Text>
+          <InputGroup 
+            background='white'
+            rounded='20px'
+            w='100%'
+            mt='16px'
+            alignItems='center'
+          >
+            <Input 
+              fontSize='16px' 
+              rounded='20px' 
+              placeholder='Email Address'
+              w='100%'
+              h='46px'
+            />
+            <InputRightElement
+              w='120px'
+              h='100%'
+              rounded='20px'
+            >
+              <Button
+                background='#378aa5'
+                rounded='20px'
+              >
+                Subscribe
+              </Button>
+            </InputRightElement>
+          </InputGroup>
+          <HStack
+            mt='20px'
+            spacing='50px'
+            height='32px'
+          >
+            <FaDiscord size='32px' color='#378aa5'/>
+            <FaTwitter size='32px' color='#378aa5'/>
+            <FaYoutube size='32px' color='#378aa5'/>
+            <FaFacebook size='32px' color='#378aa5'/>
+            <FaInstagram size='32px' color='#378aa5'/>
+            <FaReddit size='32px' color='#378aa5'/>
+            <FaTiktok size='32px' color='#378aa5'/>
+          </HStack>
+        </Flex>
+      </Stack>
+      <Divider orientation='horizontal' mt='40px' mb='40px' background='white' height='1px' />
+      <Stack
+        direction={{sm: 'column', md:'column', lg:'row'}}
+        w='100%'
+        justify='space-between'
+      >
+        <Text
+          fontSize='16px'
+        >
+          Copyright © 2022 GlowToken LLC. | All Rights Reserved.
         </Text>
-      </HStack>
+        <HStack
+          spacing='20px'
+          justify='center'
+          flexWrap='wrap'
+        >
+          {data.map((item, index) => (
+            <Flex>
+              <Text>
+                {item.title}
+              </Text>
+            </Flex>
+          ))}
+        </HStack>
+      </Stack>
     </Flex>
   );
 }

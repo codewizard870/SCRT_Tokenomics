@@ -12,6 +12,7 @@ const About: FunctionComponent = (props) => {
       w='100%'
       justify={'center'}
       pt='80px'
+      px={{sm:'30px', md: '50px', lg:'80px'}}
     >
       <Text>About Glow</Text>
       <Text fontSize='32px'>How We Operate</Text>

@@ -3,7 +3,7 @@ import { Stack, Flex, Image, Text, HStack } from '@chakra-ui/react'
 
 import Tab from './Tab'
 import ConnectWallet from './ConnectWallet';
-import Logo from '../../assets/logo.png'
+import Logo from '../../assets/logo.webp'
 import menu from '../../assets/menu.svg'
 
 const Navbar: FunctionComponent = (props) => {

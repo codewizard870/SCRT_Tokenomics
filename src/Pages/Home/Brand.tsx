@@ -10,25 +10,20 @@ import watcher from '../../assets/watcher.png';
 const Brand: FunctionComponent = (props) => {
 
   return (
-    <Stack
-      direction={{ base: 'column', md: 'column', lg: 'row' }}
+    <Flex
+      direction='row'
       w='100%'
-      spacing='50px'
       mb='75px'
-      justify={'center'}
+      justify={'space-between'}
+      px={{sm:'10px', md: '50px', lg:'80px'}}
+      flexWrap='wrap'
     >
-      <HStack spacing='50px' alignSelf={'center'}>
-        <Image src={bscscan} width='150px' />
-        <Image src={coinmarket} width='150px' />
-      </HStack>
-      <HStack spacing='50px' alignSelf={'center'}>
-        <Image src={certik} width='150px' />
-        <Image src={nomics} width='150px' />
-      </HStack>
-      <HStack spacing='50px' alignSelf={'center'}>
-        <Image src={watcher} width='150px' />
-      </HStack>
-    </Stack>
+      <Image src={bscscan} width='150px' />
+      <Image src={coinmarket} width='150px' />
+      <Image src={certik} width='150px' />
+      <Image src={nomics} width='150px' />
+      <Image src={watcher} width='150px' />
+    </Flex>
   );
 }
 export default Brand;
