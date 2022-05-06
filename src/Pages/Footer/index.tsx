@@ -3,7 +3,7 @@ import { HStack, Stack, VStack, Flex, Text, Image, Input, InputGroup, InputRight
 
 import {FaDiscord, FaTwitter, FaYoutube, FaFacebook, FaInstagram, FaReddit, FaTiktok} from 'react-icons/fa';
 
-import logo from '../../assets/logo.webp'
+import logo from '../../assets/logo.png'
 
 const data = [
   {title:'Branding', url:'branding'},
@@ -19,10 +19,11 @@ const Footer: FunctionComponent = (props) => {
     <Flex
       direction='column'
       px={{ sm: '10px', md:'20px', lg: '50px' }}
-      pt={'108px'}
+      pt='50px'
+      pb='50px'
       w={'100%'}
       background='#e5e7e9'
-      pb='50px'
+
     >
       <Stack
         direction={{sm: 'column', md:'column', lg:'row'}}

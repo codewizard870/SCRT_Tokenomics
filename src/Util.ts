@@ -45,6 +45,12 @@ export function floor(amount: number) {
   return Math.floor(amount * 100) / 100;
 }
 
+export function fixedNumberString(amount: number) {
+  let above = Math.floor(amount);
+  let below = Math.round(amount*100 - Math.floor(amount)*100);
+  return above.toString() + "." + below.toString();
+}
+
 export function getDateString(time: number) {
   const month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 

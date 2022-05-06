@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import { Stack, HStack, Flex, Image, Text } from '@chakra-ui/react'
 
-import Animation from '../../assets/to-the-stars-animate.svg';
+import Animation from '../../assets/illustration_logo_scrt_3d_c4e3ded338_wdkdfIEJgm.svg';
 
 const Welcome: FunctionComponent = (props) => {
 
@@ -53,7 +53,7 @@ const Welcome: FunctionComponent = (props) => {
         </Text>
       </Flex>
       <Flex w={{sm:'100%', md:'100%', lg:'50%'}}>
-        <Image src={Animation} />
+        <Image src={Animation} width='250px'/>
       </Flex>
     </Stack>
   );

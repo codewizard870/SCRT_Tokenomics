@@ -3,7 +3,7 @@ import { Stack, Flex, Image, Text, HStack } from '@chakra-ui/react'
 
 import Tab from './Tab'
 import ConnectWallet from './ConnectWallet';
-import Logo from '../../assets/logo.webp'
+import Logo from '../../assets/logo.png'
 import menu from '../../assets/menu.svg'
 
 const Navbar: FunctionComponent = (props) => {
@@ -29,7 +29,7 @@ const Navbar: FunctionComponent = (props) => {
       transition='all 0.5s'
     >
       <HStack>
-        <Image src={Logo} />
+        <Image src={Logo} width='30px'/>
         <Text fontSize='20px'>Glow</Text>
         <sup>v2</sup>
       </HStack>
