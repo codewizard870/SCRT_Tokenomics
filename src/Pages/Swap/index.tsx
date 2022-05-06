@@ -12,7 +12,7 @@ const Swap: FunctionComponent = (props) => {
   const baseURL = "https://api.coingecko.com/api/v3/";
 
   useEffect(() => {
-    const fetchPrice = async () => { 
+    const fetchPrice = async () => {
       const res = await axios.get(
         'coins/secret/market_chart?vs_currency=usd&days=30',
         { baseURL }
@@ -22,39 +22,39 @@ const Swap: FunctionComponent = (props) => {
     fetchPrice().then((res) => {
       let len = res.data.prices.length;
       let temp = [];
-      for(let i=0; i<50; i++ ){
-        temp[i] = {time: res.data.prices[len-51+i][0], price: res.data.prices[len-51+i][1]};
+      for (let i = 0; i < 50; i++) {
+        temp[i] = { time: res.data.prices[len - 51 + i][0], price: res.data.prices[len - 51 + i][1] };
       }
       setData(temp)
     });
   }, [])
 
   return (
-    <Stack 
+    <Stack
       pt='180px'
       spacing='50px'
       w='100%'
       justify={'center'}
-      px={{sm:'5px', md: '50px', lg:'80px'}}
-      direction={{sm:'column', md: 'column', lg:'row'}}
+      px={{ sm: '5px', md: '50px', lg: '80px' }}
+      direction={{ sm: 'column', md: 'column', lg: 'row' }}
     >
-      <Flex 
+      <Flex
         direction='column'
-        w='100%'
+        w={{ sm: '100%', md: '100%', lg: '60%' }}
         rounded='20px'
         bg='#e5e7e9'
         p='20px'
       >
         <Flex justify={'center'}>
-          <Image src={scrtswap} width='30px'/>
+          <Image src={scrtswap} width='30px' />
           <Text ml='10px'>
             SCRT
           </Text>
         </Flex>
-        <PriceChart data={data}/>
+        <PriceChart data={data} />
       </Flex>
-      <Flex 
-        w={{sm:'100%', md:'100%', lg:'50%'}}
+      <Flex
+        w={{ sm: '100%', md: '100%', lg: '50%' }}
       >
         <SwapPanel />
       </Flex>

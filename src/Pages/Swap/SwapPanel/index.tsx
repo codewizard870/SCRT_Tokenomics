@@ -13,7 +13,7 @@ const SwapPanel: FunctionComponent = (props) => {
   const [fromBalance, setFromBalance] = useState(0);
 
   const [toValue, setToValue] = useState(0);
-  const [toTokenIndex, setToTokenIndex] = useState(4);
+  const [toTokenIndex, setToTokenIndex] = useState(1);
   const [toBalance, setToBalance] = useState(0);
 
   const [tokenList, setTokenList] = useState<any[]>([]);
@@ -26,7 +26,7 @@ const SwapPanel: FunctionComponent = (props) => {
   const changeToToken = (index: number) => {
     setToTokenIndex(index);
   }
-  
+
   useEffect(() => {
     const fetchToken = async (baseURL: string) => {
       const res = await axios.get(
