@@ -2,7 +2,7 @@ import React, { FunctionComponent, useEffect, useState } from 'react';
 import { Stack, VStack, HStack, Flex, Image, Text, Divider, Input, useDisclosure } from '@chakra-ui/react'
 import axios from 'axios';
 import { MdKeyboardArrowDown, MdSearch } from 'react-icons/md';
-import { fixedNumberString } from '../../../Util';
+import { fixedNumberString, convertTosSymbol } from '../../../Util';
 import TokenList from './TokenList';
 
 interface Props {
@@ -18,7 +18,8 @@ const InputPanel: FunctionComponent<Props> = ({ index, tokenList, balance, setBa
   return (
     <VStack
       mt='10px' mx='10px'
-      p='10px'
+      px='20px'
+      py='10px'
       border="solid 1px white"
       spacing='10px' 
       rounded='20px'
@@ -44,8 +45,9 @@ const InputPanel: FunctionComponent<Props> = ({ index, tokenList, balance, setBa
           value={fixedNumberString(balance)} 
         />
         <Flex
-          w='180px'
+          minW='140px'
           align='center'
+          justify={'end'}
           cursor='pointer'
           onClick={() => onOpen()}
           _hover={{color: 'white'}}
@@ -55,7 +57,7 @@ const InputPanel: FunctionComponent<Props> = ({ index, tokenList, balance, setBa
             fallbackSrc={`https://app.secretswap.net${tokenList[index]?.display_props?.image}`}
             w='30px' h='30px'
           />
-          <Text ml='10px'>{tokenList[index]?.dst_coin}</Text>
+          <Text ml='10px'>{convertTosSymbol(tokenList[index]?.dst_coin)}</Text>
           <MdKeyboardArrowDown width='30px' />
         </Flex>
       </Flex>

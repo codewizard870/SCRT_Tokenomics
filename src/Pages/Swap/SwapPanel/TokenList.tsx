@@ -1,5 +1,6 @@
 import React, { FunctionComponent, useEffect, useState } from 'react';
 import { Stack, VStack, HStack, Flex, Image, Text, Divider, Input } from '@chakra-ui/react'
+import { convertTosSymbol } from '../../../Util';
 import axios from 'axios';
 
 import {
@@ -28,7 +29,9 @@ const TokenList: FunctionComponent<Props> = ({ isOpen, onClose, tokenList, chang
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
-      <ModalContent minW='750px'>
+      <ModalContent 
+        minW={{sm:'100%', md:'100%', lg: '750px'}}
+      >
         <ModalHeader>Select a Token</ModalHeader>
         <ModalCloseButton />
         <ModalBody
@@ -53,9 +56,11 @@ const TokenList: FunctionComponent<Props> = ({ isOpen, onClose, tokenList, chang
                     fallbackSrc={`https://app.secretswap.net${item.display_props.image}`}
                     w='30px' h='30px'
                   />
-                  <Text ml='10px'>{item.dst_coin}</Text>
+                  <Text ml='10px'>{convertTosSymbol(item.dst_coin)}</Text>
                 </Flex>
-                <Flex>
+                <Flex
+                  display={{sm:'none', md:'none', lg:'flex'}}
+                >
                   <Text>{item.dst_address}</Text>
                 </Flex>
               </Flex>

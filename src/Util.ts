@@ -57,3 +57,15 @@ export function getDateString(time: number) {
   let datetime = new Date(time * 1000)
   return (month[datetime.getMonth()] + "   " + datetime.getDate() + " , " + datetime.getFullYear());
 }
+
+export function convertTosSymbol(symbol: string) {
+  if(symbol == undefined)
+    return '';
+    
+  const pattern = "secret-";
+  const len = pattern.length;
+  if(symbol.substr(0, len) == pattern)
+    return "s" + symbol.substr(len);
+  else 
+    return symbol;
+}
