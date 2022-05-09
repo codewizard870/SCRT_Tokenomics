@@ -5,7 +5,7 @@ import Layout from './Layout';
 import Home from './Pages/Home'
 import Swap from './Pages/Swap';
 import RoadMap from './Pages/Roadmap';
-import Candlestick from './Pages/Candlestick'
+import Lottery from './Pages/Lottery';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
           <Route path="home" element={<Home />} />
           <Route path="swap" element={<Swap />} />
           <Route path="roadmap" element={<RoadMap />} />
-          <Route path='candle' element={<Candlestick />} />
+          <Route path="lottery" element={<Lottery />} />
           <Route path="*" element={"404"} />
         </Route>
       </Routes>

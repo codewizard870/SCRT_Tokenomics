@@ -22,8 +22,8 @@ const Footer: FunctionComponent = (props) => {
       pt='50px'
       pb='50px'
       w={'100%'}
-      background='#e5e7e9'
-
+      background='#d0d4d7'
+      mt='0px !important'
     >
       <Stack
         direction={{sm: 'column', md:'column', lg:'row'}}

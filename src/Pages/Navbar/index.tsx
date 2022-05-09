@@ -20,6 +20,7 @@ const Navbar: FunctionComponent = (props) => {
       direction={'row'}
       px={{ sm: '10px', md:'20px', lg: '109px' }}
       pt={'50px'}
+      pb={'20px'}
       w={'100%'}
       justify={'space-between'}
       align={'center'}
@@ -27,6 +28,7 @@ const Navbar: FunctionComponent = (props) => {
       background={scrolled ? 'white': 'none'}
       boxShadow={scrolled ? '0px 0px 30px rgb(127 137 161 / 30%)' : 'none'}
       transition='all 0.5s'
+      zIndex={'9999'}
     >
       <HStack>
         <Image src={Logo} width='30px'/>
