@@ -30,7 +30,7 @@ const TokenList: FunctionComponent<Props> = ({ isOpen, onClose, tokenList, chang
     <Modal isOpen={isOpen} onClose={onClose}>
       <ModalOverlay />
       <ModalContent 
-        minW={{sm:'100%', md:'100%', lg: '750px'}}
+        minW={{sm:'100%', md:'100%', lg: '750px'}}  zIndex={10}
       >
         <ModalHeader>Select a Token</ModalHeader>
         <ModalCloseButton />

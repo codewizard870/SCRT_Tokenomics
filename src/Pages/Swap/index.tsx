@@ -37,6 +37,7 @@ const Swap: FunctionComponent = (props) => {
       justify={'center'}
       px={{ sm: '5px', md: '50px', lg: '80px' }}
       direction={{ sm: 'column', md: 'column', lg: 'row' }}
+      mb='40px !important'
     >
       <Flex
         direction='column'

@@ -53,6 +53,7 @@ const SwapPanel: FunctionComponent = (props) => {
       p='20px'
     >
       <InputPanel
+        label='From'
         balance={fromBalance}
         setBalance={setFromBalance}
         index={fromTokenIndex}
@@ -63,6 +64,7 @@ const SwapPanel: FunctionComponent = (props) => {
         <CgArrowsExchangeAltV size='30px' color='green' />
       </Flex>
       <InputPanel
+        label="To"
         balance={fromBalance}
         setBalance={setFromBalance}
         index={toTokenIndex}

@@ -6,13 +6,14 @@ import { fixedNumberString, convertTosSymbol } from '../../../Util';
 import TokenList from './TokenList';
 
 interface Props {
+  label: string,
   changeToken: (index: number) => void,
   tokenList: any[],
   index: number,
   balance: number,
   setBalance: React.Dispatch<React.SetStateAction<number>>,
 }
-const InputPanel: FunctionComponent<Props> = ({ index, tokenList, balance, setBalance,  changeToken }) => {
+const InputPanel: FunctionComponent<Props> = ({ label, index, tokenList, balance, setBalance,  changeToken }) => {
   const {isOpen, onClose, onOpen} = useDisclosure();
 
   return (
@@ -26,7 +27,7 @@ const InputPanel: FunctionComponent<Props> = ({ index, tokenList, balance, setBa
     >
       <Flex w='100%' justify={'space-between'}>
         <Text>
-          From
+          {label}
         </Text>
         <HStack>
           <Text>
@@ -47,7 +48,7 @@ const InputPanel: FunctionComponent<Props> = ({ index, tokenList, balance, setBa
         <Flex
           minW='140px'
           align='center'
-          justify={'end'}
+          justify={'space-between'}
           cursor='pointer'
           onClick={() => onOpen()}
           _hover={{color: 'white'}}
