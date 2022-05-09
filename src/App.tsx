@@ -6,6 +6,7 @@ import Home from './Pages/Home'
 import Swap from './Pages/Swap';
 import RoadMap from './Pages/Roadmap';
 import Lottery from './Pages/Lottery';
+import Charity from './Pages/Charity';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="swap" element={<Swap />} />
           <Route path="roadmap" element={<RoadMap />} />
           <Route path="lottery" element={<Lottery />} />
+          <Route path="charity" element={<Charity />} />
           <Route path="*" element={"404"} />
         </Route>
       </Routes>
