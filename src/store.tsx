@@ -1,10 +1,4 @@
 import React, { createContext, useContext, useReducer } from 'react'
-import { ConnectedWallet } from '@terra-money/wallet-provider'
-import { LCDClient } from '@terra-money/terra.js'
-
-import { floor, floorNormalize } from './Util'
-
-export type COINTYPE = 'ust' | 'luna';
 
 interface Action {
   type: ActionKind;

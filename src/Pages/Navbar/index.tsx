@@ -52,7 +52,7 @@ const Navbar: FunctionComponent = (props) => {
       <Flex display={{sm: 'block', md: 'block', lg: 'none'}}>
         <Image src={menu} background='gray' width='30px' />
       </Flex>
-      {/* <ConnectWallet /> */}
+      <ConnectWallet />
     </Flex>
   );
 }

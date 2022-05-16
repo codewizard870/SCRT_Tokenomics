@@ -69,3 +69,7 @@ export function convertTosSymbol(symbol: string) {
   else 
     return symbol;
 }
+
+export const sleep = (ms: number) => {
+  return new Promise(resolve => setTimeout(resolve, ms));
+};
