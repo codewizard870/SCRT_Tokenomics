@@ -121,14 +121,14 @@ const ConnectWallet: FunctionComponent = () => {
       const [{ address: myAddress }] = await keplrOfflineSigner.getAccounts();
       setAccount(myAddress);
 
-      const secretjs = await SecretNetworkClient.create({
-        grpcWebUrl: "https://grpc-web.azure-api.net",
-        chainId: "secret-4",
-        wallet: keplrOfflineSigner,
-        walletAddress: myAddress,
-      });
-      let res = await secretjs.query.compute.contractCodeHash(config.AMM_FACTORY_CONTRACT);
-      console.log(res)
+      // const secretjs = await SecretNetworkClient.create({
+      //   grpcWebUrl: "https://grpc-web.azure-api.net",
+      //   chainId: "secret-4",
+      //   wallet: keplrOfflineSigner,
+      //   walletAddress: myAddress,
+      // });
+      // let res = await secretjs.query.compute.contractCodeHash(config.AMM_FACTORY_CONTRACT);
+      // console.log(res)
       // const { token_info } = await secretjs.query.compute.queryContract({
       //   contractAddress: config.AMM_FACTORY_CONTRACT,
       //   codeHash: sScrtCodeHash, // optional but way faster
